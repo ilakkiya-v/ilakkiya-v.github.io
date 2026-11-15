@@ -86,7 +86,8 @@ function startRain(canvas) {
     canvas.width = w * dpr; canvas.height = h * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     cols = Math.ceil(w / size);
-    drops = Array.from({ length: cols }, () => Math.random() * -h / size);
+    // start columns spread across the visible area so rain shows immediately on tall (phone) heroes
+    drops = Array.from({ length: cols }, () => Math.random() * (h / size) * 0.9 - 6);
   }
   function draw(t) {
     requestAnimationFrame(draw);
@@ -105,7 +106,7 @@ function startRain(canvas) {
         ctx.fillText(ch, i * size, y - k * size);
       }
       drops[i] += 0.35 + (i % 5) * 0.08;
-      if (y - 9 * size > h && Math.random() > 0.96) drops[i] = Math.random() * -8;
+      if (y - 9 * size > h && Math.random() > 0.9) drops[i] = Math.random() * -8;
     }
     ctx.globalAlpha = 1;
   }
