@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# hey hacker, robots.txt is always worth a look.
+# flag part 3/3: c4ll1ng_d1dnt}

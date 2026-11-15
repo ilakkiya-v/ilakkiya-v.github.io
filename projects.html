@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | cybh3rlux</title>
+  <meta name="description" content="Security projects by Ilakkiya Vijayakumar, including Exception Guardian, winner of Anthropic × Tenable SWARM Global 2026.">
+  <meta name="theme-color" content="#0d0915">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | cybh3rlux">
+  <meta property="og:description" content="Security projects by Ilakkiya Vijayakumar, including Exception Guardian, winner of Anthropic × Tenable SWARM Global 2026.">
+  <meta property="og:image" content="assets/cyberagents-exchange-winning-exception-guardian.jpeg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js");try{if(localStorage.getItem("theme")==="pink")document.documentElement.dataset.theme="pink"}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="cybh3rlux, home"><img src="assets/logo.svg" width="26" height="26" alt=""><span class="brand-text"><span aria-hidden="true">~/</span>cybh3rlux</span></a>
+      <div class="nav-actions">
+        <div class="theme-switch" role="group" aria-label="Color theme">
+          <button type="button" data-theme-choice="dark" aria-pressed="true">Dark</button>
+          <button type="button" data-theme-choice="pink" aria-pressed="false">Pink</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Menu</span>
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <canvas class="rain" aria-hidden="true"></canvas>
+      <div class="container">
+        <p class="eyebrow mono"><span aria-hidden="true">$ </span>cd ~/projects</p>
+        <h1 id="page-title" data-scramble>Projects</h1>
+        <p class="page-lead">Tools and labs I've built, starting with the one that won SWARM Global 2026.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="page-title">
+      <div class="container">
+
+        <article class="feature-project card">
+          <div class="feature-body">
+            <p class="badge mono">1st place · Anthropic × Tenable SWARM Global 2026</p>
+            <h3>Exception Guardian</h3>
+            <p class="meta">Team wh0-Kn0w5 · built with Narasimha Tiruveedula</p>
+            <p>An open-source Python CLI and Claude Code playbook that re-checks Tenable risk exceptions that were accepted once and never revisited. It re-grades each one as <strong>REVOKE</strong>, <strong>REVIEW</strong>, or <strong>OK</strong> against CISA KEV, EPSS, asset exposure, and attack paths, then writes tested detections and a threat-hunt brief for the ones to revoke.</p>
+
+            <ul class="mini-stats">
+              <li><span class="stat-num">324</span><span>exceptions re-graded on a live lab (7 revoke, 316 review, 1 OK)</span></li>
+              <li><span class="stat-num">25</span><span>tested detection rules</span></li>
+              <li><span class="stat-num">0</span><span>breaches in 21 red-team attacks</span></li>
+            </ul>
+
+            <h4>What it produces</h4>
+            <p>Sigma detections, threat-hunt briefs, and SIEM queries for Splunk, Microsoft Sentinel, and Defender XDR.</p>
+
+            <h4>Security design</h4>
+            <ul class="checklist">
+              <li>Deterministic code, not the LLM, makes every decision</li>
+              <li>Read-only by default, with per-rule confirmation before any change</li>
+              <li>Disables instead of deletes</li>
+              <li>Hooks block risky actions and access to secrets</li>
+            </ul>
+
+            <h4>Red team</h4>
+            <p>21 attacks against the tool: 7 direct and 14 prompt injections hidden in the data. None succeeded.</p>
+
+            <p class="tags"><span>Python</span><span>Claude Code</span><span>Tenable</span><span>CISA KEV</span><span>EPSS</span><span>Sigma</span><span>Agentic AI security</span></p>
+
+            <div class="btn-row">
+              <a class="btn btn-small" href="https://exchange.tenable.com/playbooks/exception-guardian/" target="_blank" rel="noopener">CyberAgents Exchange</a>
+              <a class="btn btn-small" href="https://github.com/Alien0ne/exception-guardian" target="_blank" rel="noopener">Source on GitHub</a>
+            </div>
+          </div>
+          <figure class="feature-img">
+            <button class="img-btn" data-full="assets/cyberagents-exchange-winning-exception-guardian.jpeg" data-caption="CyberAgents Exchange: Winning Exception Guardian" aria-label="Enlarge image: CyberAgents Exchange, Winning Exception Guardian">
+              <img src="assets/cyberagents-exchange-winning-exception-guardian.jpeg" width="1177" height="669" alt="CyberAgents Exchange: Winning Exception Guardian. First place poster showing 324 exceptions re-graded, 25 tested detection rules, and 0 breaches in 21 red-team attacks" loading="lazy" decoding="async">
+            </button>
+            <figcaption>CyberAgents Exchange: Winning Exception Guardian</figcaption>
+          </figure>
+        </article>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Active Directory Attack Lab</h3>
+            <p class="meta mono">Summer 2025</p>
+            <p>A deliberately vulnerable Windows AD (DC, DNS, GPOs, file shares) with LDAP, SMB, Kerberos, and LLMNR/NBT-NS weaknesses for practicing attack paths.</p>
+            <p class="tags"><span>Active Directory</span><span>Kerberos</span><span>Windows</span></p>
+          </article>
+          <article class="card">
+            <h3>Go-Based Port Scanner</h3>
+            <p>A network port scanner written in Go for reconnaissance in offensive testing.</p>
+            <p class="tags"><span>Go</span><span>Networking</span></p>
+          </article>
+          <article class="card">
+            <h3>Scanx: Malware Scanner</h3>
+            <p class="meta mono">Fall 2024</p>
+            <p>A web tool in Elixir that scans files, URLs, domains, and IPs through the VirusTotal API.</p>
+            <p class="tags"><span>Elixir</span><span>VirusTotal API</span></p>
+          </article>
+          <article class="card">
+            <h3>Using XAI in Cybersecurity for Network Intrusion Detection</h3>
+            <p class="meta mono">Fall 2023 · VIT</p>
+            <p>Integrated explainable AI (XAI) to visualize a classifier's decisions, addressing the black-box problem in network intrusion detection systems.</p>
+            <p class="tags"><span>Machine learning</span><span>XAI</span><span>IDS</span></p>
+          </article>
+          <article class="card">
+            <h3>IBM-Z Datathon: 1st place</h3>
+            <p>Led a 6-member team building a machine learning project on IBM Cloud to help detect autism in children, followed by IBM mentorship.</p>
+            <p class="tags"><span>Machine learning</span><span>IBM Cloud</span><span>Team lead</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Ilakkiya Vijayakumar · <span class="mono">cybh3rlux</span></p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close image viewer">×</button>
+    <img src="" alt="">
+    <p class="lightbox-caption"></p>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

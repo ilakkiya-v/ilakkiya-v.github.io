@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · Access denied | cybh3rlux</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+      background: radial-gradient(ellipse 70% 60% at 20% 0%, rgba(140, 82, 255, 0.22), transparent 70%), #0d0915;
+      color: #f1ecfa; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    ::selection { background: #ff7ac8; color: #1a0b2b; }
+    .box { width: 100%; max-width: 560px; background: #0a0612; border: 1px solid #2e2245; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px -20px rgba(140, 82, 255, 0.45); }
+    .bar { display: flex; gap: 6px; padding: 10px 14px; background: #181026; border-bottom: 1px solid #2e2245; }
+    .bar span { width: 11px; height: 11px; border-radius: 50%; background: #ff7ac8; }
+    .bar span:nth-child(2) { background: #c39bff; } .bar span:nth-child(3) { background: #6ee7ff; }
+    pre { margin: 0; padding: 20px; font: 0.92rem/1.75 ui-monospace, "SF Mono", Menlo, Consolas, monospace; white-space: pre-wrap; color: #d8cfe8; }
+    b { color: #ff7ac8; } .err { color: #ff7ac8; } .ok { color: #c39bff; }
+    h1 { font-size: 1.1rem; margin: 0; padding: 0 20px; }
+    a { display: inline-block; margin: 4px 20px 22px; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; color: #1a0b2b; background: linear-gradient(135deg, #c39bff, #ff7ac8); }
+    a:focus-visible { outline: 2px solid #c39bff; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main class="box">
+    <div class="bar" aria-hidden="true"><span></span><span></span><span></span></div>
+    <pre><b>$</b> cd <span id="path">this-page</span>
+<span class="err">404: access denied. this path is out of scope.</span>
+<b>$</b> echo "nice try though"
+<span class="ok">nice try though 💅</span></pre>
+    <h1>Page not found</h1>
+    <a href="/">Return to scope (home)</a>
+  </main>
+  <script>
+    document.getElementById('path').textContent = location.pathname;
+  </script>
+</body>
+</html>
