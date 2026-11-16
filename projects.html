@@ -64,49 +64,17 @@
     <section id="projects" class="section" aria-labelledby="page-title">
       <div class="container">
 
-        <article class="feature-project card">
-          <div class="feature-body">
-            <p class="badge mono">1st place · Anthropic × Tenable SWARM Global 2026</p>
+        <div class="card-grid">
+          <article class="card">
             <h3>Exception Guardian</h3>
-            <p class="meta">Team wh0-Kn0w5 · built with Narasimha Tiruveedula</p>
-            <p>An open-source Python CLI and Claude Code playbook that re-checks Tenable risk exceptions that were accepted once and never revisited. It re-grades each one as <strong>REVOKE</strong>, <strong>REVIEW</strong>, or <strong>OK</strong> against CISA KEV, EPSS, asset exposure, and attack paths, then writes tested detections and a threat-hunt brief for the ones to revoke.</p>
-
-            <ul class="mini-stats">
-              <li><span class="stat-num">324</span><span>exceptions re-graded on a live lab (7 revoke, 316 review, 1 OK)</span></li>
-              <li><span class="stat-num">25</span><span>tested detection rules</span></li>
-              <li><span class="stat-num">0</span><span>breaches in 21 red-team attacks</span></li>
-            </ul>
-
-            <h4>What it produces</h4>
-            <p>Sigma detections, threat-hunt briefs, and SIEM queries for Splunk, Microsoft Sentinel, and Defender XDR.</p>
-
-            <h4>Security design</h4>
-            <ul class="checklist">
-              <li>Deterministic code, not the LLM, makes every decision</li>
-              <li>Read-only by default, with per-rule confirmation before any change</li>
-              <li>Disables instead of deletes</li>
-              <li>Hooks block risky actions and access to secrets</li>
-            </ul>
-
-            <h4>Red team</h4>
-            <p>21 attacks against the tool: 7 direct and 14 prompt injections hidden in the data. None succeeded.</p>
-
-            <p class="tags"><span>Python</span><span>Claude Code</span><span>Tenable</span><span>CISA KEV</span><span>EPSS</span><span>Sigma</span><span>Agentic AI security</span></p>
-
-            <div class="btn-row">
-              <a class="btn btn-small" href="https://exchange.tenable.com/playbooks/exception-guardian/" target="_blank" rel="noopener">CyberAgents Exchange</a>
-              <a class="btn btn-small" href="https://github.com/Alien0ne/exception-guardian" target="_blank" rel="noopener">Source on GitHub</a>
-            </div>
-          </div>
-          <figure class="feature-img">
-            <button class="img-btn" data-full="assets/cyberagents-exchange-winning-exception-guardian.jpeg" data-caption="CyberAgents Exchange: Winning Exception Guardian" aria-label="Enlarge image: CyberAgents Exchange, Winning Exception Guardian">
+            <p class="meta mono">1st place · Anthropic × Tenable SWARM Global 2026</p>
+            <p>An open-source Python CLI and Claude Code playbook that re-grades forgotten Tenable risk exceptions as REVOKE, REVIEW, or OK. Built with Narasimha Tiruveedula (team wh0-Kn0w5).</p>
+            <button class="img-btn card-shot" data-full="assets/cyberagents-exchange-winning-exception-guardian.jpeg" data-caption="CyberAgents Exchange: Winning Exception Guardian" aria-label="Enlarge image: CyberAgents Exchange, Winning Exception Guardian">
               <img src="assets/cyberagents-exchange-winning-exception-guardian.jpeg" width="1177" height="669" alt="CyberAgents Exchange: Winning Exception Guardian. First place poster showing 324 exceptions re-graded, 25 tested detection rules, and 0 breaches in 21 red-team attacks" loading="lazy" decoding="async">
             </button>
-            <figcaption>CyberAgents Exchange: Winning Exception Guardian</figcaption>
-          </figure>
-        </article>
-
-        <div class="card-grid">
+            <p class="tags"><span>Python</span><span>Claude Code</span><span>Tenable</span><span>Sigma</span><span>AI security</span></p>
+            <p class="card-link"><a href="https://github.com/Alien0ne/exception-guardian" target="_blank" rel="noopener">Source on GitHub ↗</a> · <a href="https://exchange.tenable.com/playbooks/exception-guardian/" target="_blank" rel="noopener">CyberAgents Exchange ↗</a></p>
+          </article>
           <article class="card">
             <h3>Active Directory Attack Lab</h3>
             <p class="meta mono">Summer 2025</p>
@@ -116,7 +84,11 @@
           <article class="card">
             <h3>Go-Based Port Scanner</h3>
             <p>A network port scanner written in Go for reconnaissance in offensive testing.</p>
+            <button class="img-btn card-shot" data-full="assets/goscan-demo.png" data-caption="goscan scanning a local lab: 7 open ports with service versions in 3.02s" aria-label="Enlarge image: goscan terminal output">
+              <img src="assets/goscan-demo-small.jpg" width="1000" height="712" alt="Terminal output of goscan scanning 127.0.0.1 in a local lab. It finds 7 open TCP ports (FTP, SSH, SMTP, MySQL, Redis, HTTP proxy, HTTPS) with service versions, then reports 1031 probes in 3.02 seconds" loading="lazy" decoding="async">
+            </button>
             <p class="tags"><span>Go</span><span>Networking</span></p>
+            <p class="card-link"><a href="https://github.com/ilakkiya-v/goscan" target="_blank" rel="noopener">Source on GitHub ↗</a></p>
           </article>
           <article class="card">
             <h3>Scanx: Malware Scanner</h3>
