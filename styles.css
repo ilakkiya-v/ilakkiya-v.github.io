@@ -1,21 +1,21 @@
 :root {
-  --bg: #0d0915;
-  --bg-alt: #120c1e;
-  --surface: #181026;
-  --border: #2e2245;
-  --text: #f1ecfa;
-  --text-soft: #d8cfe8;
-  --muted: #a99cc2;
+  --bg: #08070b;
+  --bg-alt: #0c0b10;
+  --surface: #121118;
+  --border: #25212e;
+  --text: #f2f0f5;
+  --text-soft: #d5d1dc;
+  --muted: #a19bab;
   --accent: #c39bff;
   --accent-2: #ff7ac8;
-  --accent-dim: rgba(195, 155, 255, 0.14);
-  --pink-dim: rgba(255, 122, 200, 0.14);
+  --accent-dim: rgba(195, 155, 255, 0.10);
+  --pink-dim: rgba(255, 122, 200, 0.11);
   --on-accent: #1a0b2b;
-  --header-bg: rgba(13, 9, 21, 0.88);
-  --term-bg: #0a0612;
-  --glow: rgba(160, 100, 255, 0.45);
-  --glow-2: rgba(255, 122, 200, 0.35);
-  --rain-1: #c39bff;
+  --header-bg: rgba(8, 7, 11, 0.9);
+  --term-bg: #060509;
+  --glow: rgba(160, 100, 255, 0.25);
+  --glow-2: rgba(255, 122, 200, 0.25);
+  --rain-1: #8a7aa6;
   --rain-2: #ff7ac8;
   --radius: 12px;
   --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
@@ -83,7 +83,7 @@ ul { padding-left: 1.2em; }
 }
 
 /* Hero */
-.hero { position: relative; overflow: hidden; padding: 88px 0 72px; background: radial-gradient(ellipse 70% 60% at 15% 0%, rgba(140, 82, 255, 0.22), transparent 70%), radial-gradient(ellipse 50% 50% at 95% 30%, rgba(255, 122, 200, 0.12), transparent 70%); }
+.hero { position: relative; overflow: hidden; padding: 88px 0 72px; background: radial-gradient(ellipse 70% 60% at 15% 0%, rgba(140, 82, 255, 0.09), transparent 70%), radial-gradient(ellipse 50% 50% at 95% 30%, rgba(255, 122, 200, 0.06), transparent 70%); }
 .eyebrow { color: var(--accent-2); font-size: .9rem; letter-spacing: .04em; margin-bottom: .75rem; }
 .hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); letter-spacing: -0.02em; margin-bottom: .4em; }
 .tagline { font-size: clamp(1.1rem, 2.6vw, 1.35rem); color: var(--text); max-width: 46ch; }
@@ -336,7 +336,7 @@ figcaption { color: var(--muted); font-size: .88rem; margin-top: 8px; }
    ========================================================= */
 .page-hero {
   position: relative; overflow: hidden; padding: 72px 0 48px; border-bottom: 1px solid var(--border);
-  background: radial-gradient(ellipse 70% 60% at 15% 0%, rgba(140, 82, 255, 0.22), transparent 70%), radial-gradient(ellipse 50% 50% at 95% 30%, rgba(255, 122, 200, 0.12), transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 15% 0%, rgba(140, 82, 255, 0.09), transparent 70%), radial-gradient(ellipse 50% 50% at 95% 30%, rgba(255, 122, 200, 0.06), transparent 70%);
 }
 .page-hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); letter-spacing: -0.02em; margin-bottom: .3em; }
 .page-lead { color: var(--text-soft); max-width: 58ch; font-size: 1.08rem; margin: 0; }
@@ -414,7 +414,7 @@ figcaption { color: var(--muted); font-size: .88rem; margin-top: 8px; }
    ========================================================= */
 @media (pointer: fine) {
   html, body {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M3 2l19 10.5-8.2 1.7L9.6 22z' fill='%230d0915' stroke='%23ff7ac8' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M22 25.5s-3-1.9-3-4c0-1 .8-1.8 1.7-1.8.6 0 1 .3 1.3.7.3-.4.7-.7 1.3-.7.9 0 1.7.8 1.7 1.8 0 2.1-3 4-3 4z' fill='%23c39bff'/%3E%3C/svg%3E") 3 2, auto;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M3 2l19 10.5-8.2 1.7L9.6 22z' fill='%2308070b' stroke='%23ff7ac8' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M22 25.5s-3-1.9-3-4c0-1 .8-1.8 1.7-1.8.6 0 1 .3 1.3.7.3-.4.7-.7 1.3-.7.9 0 1.7.8 1.7 1.8 0 2.1-3 4-3 4z' fill='%23c39bff'/%3E%3C/svg%3E") 3 2, auto;
   }
   a, button, summary, .img-btn, label[for] {
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23ff7ac8' stroke-width='2'/%3E%3Cpath d='M16 1v7M16 24v7M1 16h7M24 16h7' stroke='%23c39bff' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 20.5s-4-2.5-4-5.3c0-1.3 1-2.3 2.3-2.3.7 0 1.3.3 1.7.9.4-.6 1-.9 1.7-.9 1.3 0 2.3 1 2.3 2.3 0 2.8-4 5.3-4 5.3z' fill='%23ff7ac8'/%3E%3C/svg%3E") 16 16, pointer;
@@ -450,3 +450,6 @@ figcaption { color: var(--muted); font-size: .88rem; margin-top: 8px; }
 .card-shot { margin: 0.25rem 0 0.9rem; }
 .card-shot img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); }
 .card-link { margin: 0.6rem 0 0; font-size: 0.92rem; }
+
+/* dark mode: quieter rain so purple never overpowers */
+:root:not([data-theme="pink"]) .rain { opacity: .4; }
