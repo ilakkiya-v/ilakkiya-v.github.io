@@ -20,9 +20,12 @@
   <meta name="twitter:image" content="https://ilakkiya-v.github.io/assets/og-card.jpg?v=2">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add("js");try{if(localStorage.getItem("theme")==="pink")document.documentElement.dataset.theme="pink"}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-experience">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="top">
@@ -65,69 +68,73 @@
       <div class="container">
 
         <ol class="timeline">
-          <li class="job">
+          <li class="job job-current">
+            <span class="job-node" aria-hidden="true"></span>
             <div class="job-head">
-              <h3>Cybersecurity Penetration Tester Analyst <span class="at">· Aventiv Technologies</span></h3>
-              <p class="meta mono">Oct 2025 – Present · Remote / On-site</p>
+              <p class="job-date mono">Oct 2025 – Present · Remote / On-site <span class="live" aria-label="current role">now</span></p>
+              <h2 class="job-co">Aventiv Technologies</h2>
+              <p class="job-role mono"><span aria-hidden="true">&gt; </span>Cybersecurity Penetration Tester Analyst</p>
             </div>
-            <ul>
-              <li>Internal (on-site) and external network penetration tests in production environments.</li>
-              <li>Web application, API, and mobile (company tablet platform) penetration testing with Burp Suite and Metasploit.</li>
-              <li>Found critical business logic, access control, and injection flaws that scanners missed, plus high-risk API vulnerabilities.</li>
-              <li>Application security SME: manual secure code review, triage of 20–30 Snyk findings per day, and retesting of fixes.</li>
-              <li>Python scripts to test and manage end-of-life sites; proof-of-concept exploits and custom payloads.</li>
-              <li>Scoping, risk assessment, and reporting; presenting findings to executives.</li>
-              <li>Secure coding training for developers; mentoring secure code review sessions.</li>
-              <li>Weekend security on-call for zero-days; evidence collection; remediation reviews and cleanup with dev teams.</li>
-              <li>Endpoint detection and insider threat use cases; cloud architecture review for the AWS migration.</li>
+            <p class="job-sum">I test and help secure hundreds of internal applications, from web apps and APIs to mobile and network infrastructure, and work with developers to fix what I find.</p>
+            <ul class="job-points">
+              <li><strong>Penetration testing:</strong> black-box web application and API penetration tests from recon to reporting, internal (on-site) and external network tests in production environments, and mobile application security testing of the company’s tablet platform.</li>
+              <li><strong>Finding what scanners miss:</strong> manual testing that uncovers critical business logic, access control, authentication and injection flaws that automated tools don’t catch.</li>
+              <li><strong>Going deeper:</strong> when I find a vulnerability, I don’t stop there. I look for every other way an attacker could get in, so the whole problem gets fixed, not just one symptom.</li>
+              <li><strong>Application security:</strong> the team’s AppSec go-to, pairing manual secure code review with hands-on testing to trace root causes and confirm exploitability. I triage 20–30 Snyk and Semgrep findings a day, separating real risk from false positives.</li>
+              <li><strong>Incident response:</strong> weekend security on-call for critical zero-days. When the PHP2Shell vulnerability emerged, I researched in-the-wild exploitation, built a proof of concept and verified that every PHP system was patched.</li>
+              <li><strong>Reporting:</strong> clear reports with reproduction steps, evidence, CVSS-rated risk and remediation guidance. I present findings to executives and retest every fix.</li>
+              <li><strong>Working with developers:</strong> I work alongside developers at every step when I find something critical, and help run secure coding and secure code review training.</li>
+              <li><strong>Automation:</strong> reusable test cases, plus a tool I built for end-of-life systems (see <a href="projects.html">EOL Scanner in Projects</a>).</li>
+            </ul>
+            <p class="tags job-tags" aria-label="Toolkit"><span>Kali Linux</span><span>Burp Suite</span><span>Nmap</span><span>sqlmap</span><span>ffuf</span><span>Metasploit</span><span>Snyk</span><span>Semgrep</span><span>Python</span></p>
+          </li>
+          <li class="job">
+            <span class="job-node" aria-hidden="true"></span>
+            <div class="job-head">
+              <p class="job-date mono">Jun 2025 – Jul 2025 · New York, NY</p>
+              <h2 class="job-co">Aon Cyber Solutions</h2>
+              <p class="job-role mono"><span aria-hidden="true">&gt; </span>Penetration Testing Intern</p>
+            </div>
+            <ul class="job-points">
+              <li>Client-facing web application and internal/external network penetration tests; my critical findings went into the client deliverable.</li>
+              <li>Explored Active Directory attack paths in a lab environment (ADCS ESC1, Kerberoasting, DCSync, credential reuse) with BloodHound, Certipy, NetExec and Kerbrute.</li>
+              <li>Operated Cobalt Strike C2 infrastructure; supported phishing (social engineering), threat intelligence and a disk forensics session.</li>
+              <li>Wrote and reviewed client-ready reports to Aon’s readout standards and presented findings to client executives.</li>
             </ul>
           </li>
-
           <li class="job">
+            <span class="job-node" aria-hidden="true"></span>
             <div class="job-head">
-              <h3>Penetration Testing Intern <span class="at">· Aon Cyber Solutions</span></h3>
-              <p class="meta mono">Jun 2025 – Jul 2025 · New York, NY</p>
+              <p class="job-date mono">Nov 2024 – Oct 2025 · Washington, DC</p>
+              <h2 class="job-co">George Washington University</h2>
+              <p class="job-role mono"><span aria-hidden="true">&gt; </span>Student Security Specialist (SOC / Incident Response)</p>
             </div>
-            <ul>
-              <li>Client-facing web app and internal/external network penetration tests; critical findings in a client deliverable.</li>
-              <li>Explored Active Directory attack paths in a lab: ADCS ESC1, Kerberoasting, DCSync, credential reuse (BloodHound, Certipy, NetExec, Kerbrute).</li>
-              <li>Operated Cobalt Strike C2; social engineering (phishing); threat intelligence; disk forensics; macOS testing.</li>
-              <li>Wrote and reviewed client-ready reports; presented to client executives.</li>
+            <ul class="job-points">
+              <li>Handled 75%+ of weekly abuse, spam and phishing reports, triaging and responding to threats in Splunk.</li>
+              <li>Built SOAR playbooks to automate investigation and response; worked with CrowdStrike, SentinelOne and Palo Alto firewalls.</li>
             </ul>
           </li>
-
           <li class="job">
+            <span class="job-node" aria-hidden="true"></span>
             <div class="job-head">
-              <h3>Student Security Specialist (SOC / Incident Response) <span class="at">· George Washington University</span></h3>
-              <p class="meta mono">Nov 2024 – Oct 2025 · Washington, DC</p>
+              <p class="job-date mono">Jan 2023 – Jul 2024 · Bengaluru, India</p>
+              <h2 class="job-co">Oracle</h2>
+              <p class="job-role mono"><span aria-hidden="true">&gt; </span>Associate Software Engineer</p>
             </div>
-            <ul>
-              <li>Handled 75%+ of weekly abuse, spam, and phishing reports in Splunk.</li>
-              <li>Used CrowdStrike and SentinelOne EDR; built SOAR playbooks.</li>
-              <li>Used Palo Alto firewalls, Cisco Email Security, and NIST guidance for incident response.</li>
+            <ul class="job-points">
+              <li>Built and tested containerised 5G core services on Docker and Kubernetes.</li>
+              <li>Built test automation that raised coverage from 60% to 90%+ (Spot Award), and a compile-time script that cut coverage-gap detection time by ~70%.</li>
             </ul>
           </li>
-
           <li class="job">
+            <span class="job-node" aria-hidden="true"></span>
             <div class="job-head">
-              <h3>Associate Software Engineer <span class="at">· Oracle</span></h3>
-              <p class="meta mono">Jan 2023 – Jul 2024 · Bengaluru, India</p>
+              <p class="job-date mono">Jun 2022 – Jul 2022</p>
+              <h2 class="job-co">Deloitte USI</h2>
+              <p class="job-role mono"><span aria-hidden="true">&gt; </span>Risk and Advisory Intern, Cybersecurity</p>
             </div>
-            <ul>
-              <li>Built automation and test coverage for containerized 5G core services on Docker and Kubernetes.</li>
-              <li>Wrote a compile-time script that calculates unit test coverage automatically, cutting gap detection time by about 70%.</li>
-              <li>Received a Spot Award for raising test coverage from 60% to 90%+.</li>
-            </ul>
-          </li>
-
-          <li class="job">
-            <div class="job-head">
-              <h3>Risk and Advisory Intern, Cybersecurity <span class="at">· Deloitte USI</span></h3>
-              <p class="meta mono">Jun 2022 – Jul 2022 · Hyderabad, India</p>
-            </div>
-            <ul>
-              <li>Assisted SOC analysts monitoring email threats with Splunk and JIRA; supported SOAR education initiatives.</li>
-              <li>Received a full-time offer based on performance.</li>
+            <ul class="job-points">
+              <li>Assisted SOC analysts in monitoring email threats using Splunk and JIRA, and took part in SOAR education initiatives.</li>
             </ul>
           </li>
         </ol>

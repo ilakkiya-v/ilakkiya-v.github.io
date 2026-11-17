@@ -227,3 +227,18 @@ if (ctfForm && ctfResult) {
     }
   });
 }
+
+/* ---------- Experience timeline: line fills as you scroll ---------- */
+const timeline = document.querySelector('.timeline');
+if (timeline && !reduceMotion) {
+  let ticking = false;
+  const update = () => {
+    const r = timeline.getBoundingClientRect();
+    const seen = (window.innerHeight * 0.75 - r.top) / r.height;
+    timeline.style.setProperty('--progress', Math.max(0, Math.min(1, seen)).toFixed(3));
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+}
